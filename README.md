@@ -63,6 +63,6 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ---
 
-> This extension does not collect information about you or your messages. We only communicate with our server to display information about problems or updates. Visit the privacy policy to learn more.
+> This extension does not collect information about you or your messages. Visit the [privacy policy](https://pfwa.muzakki.id/privacy-policy/) to learn more.
 >
 > **_Disclaimer:_** _WhatsApp is a trademark of WhatsApp Inc., registered in the U.S. and other countries. This extension is an independent project and has no relationship to WhatsApp or WhatsApp Inc._

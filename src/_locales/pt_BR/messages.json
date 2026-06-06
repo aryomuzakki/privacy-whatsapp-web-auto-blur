@@ -3,7 +3,7 @@
         "message": "Privacidade para o WhatsApp Web (Desfoque Automático)"
     },
     "extensionDescription": {
-        "message": "Oculta suas mensagens até que você passe o mouse sobre elas."
+        "message": "Desfoca automaticamente mensagens, mídias, nomes e muito mais no WhatsApp Web até você passar o mouse. Fork da comunidade mantido ativamente."
     },
     "extensionShortcut": {
         "message": "Ligado/Desligado"

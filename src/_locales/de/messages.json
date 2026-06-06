@@ -3,7 +3,7 @@
         "message": "Privacy for WhatsApp Web (Auto Blur WA)"
     },
     "extensionDescription": {
-        "message": "Verbirgt Ihre Nachrichten, bis Sie mit der Maus über sie gehen."
+        "message": "Automatisch unscharfe Nachrichten, Medien, Namen und mehr auf WhatsApp Web, bis Sie mit der Maus darüber fahren. Aktiv gepflegter Community-Fork."
     },
     "extensionShortcut": {
         "message": "Ein-/Ausschalten"

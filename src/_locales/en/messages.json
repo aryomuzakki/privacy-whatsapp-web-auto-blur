@@ -3,7 +3,7 @@
         "message": "Privacy for WhatsApp Web (Auto Blur WA)"
     },
     "extensionDescription": {
-        "message": "Hides your messages until you hover over them."
+        "message": "Automatically blurs messages, media, names, and more, on WhatsApp Web until you hover. Actively maintained community fork"
     },
     "extensionShortcut": {
         "message": "Toggle On/Off"
