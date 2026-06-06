@@ -1,6 +1,6 @@
 {
     "extensionName": {
-        "message": "Privacy Extension For WhatsApp Web"
+        "message": "Privacy for WhatsApp Web (Auto Blur WA)"
     },
     "extensionDescription": {
         "message": "Verbirgt Ihre Nachrichten, bis Sie mit der Maus über sie gehen."
@@ -144,7 +144,7 @@
         "message": "Fehlerberichte & Vorschläge"
     },
     "footerBugReportsDescription": {
-        "message": "Wenn Sie Probleme haben oder einen Funktionswunsch haben, senden Sie bitte eine E-Mail: contact@lukaslen.com"
+        "message": "Wenn Sie Probleme haben oder einen Funktionswunsch haben, erstellen Sie bitte ein Issue auf GitHub."
     },
     "footerAuthor": {
         "message": "Autor"

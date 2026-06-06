@@ -1,10 +1,38 @@
 // theme detector and changer
 const STORAGE_KEY = "pfwa-theme";
 
+showEdgeElements = (show) => {
+  const topEdge = document.querySelector("#mainContent > .wrapper > .top-edge");
+  const bottomEdge = document.querySelector("#mainContent > .wrapper > .bottom-edge");
+  if (!topEdge || !bottomEdge) {
+    // console.warn("Edge elements not found");
+    return;
+  }
+  if (show) {
+    topEdge.style.height = "6px";
+    bottomEdge.style.height = "6px";
+  } else {
+    topEdge.style.height = "0px";
+    bottomEdge.style.height = "0px";
+  }
+}
+
 // listener and first check
 const setCurrentTheme = (ev) => {
   const theme = ev?.matches ? "dark" : "light";
+  // extra set edge element class before set theme
+  showEdgeElements(false);
+
+  // set theme
   document.body.dataset.theme = theme;
+  setTimeout(() => {
+
+    // extra set edge element class after set them
+    // setTimeout(() => {
+      showEdgeElements(true);
+    // }, 1000);
+  }, 100);
+
   return theme;
 }
 

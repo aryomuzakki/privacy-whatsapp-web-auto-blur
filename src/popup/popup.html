@@ -1,6 +1,7 @@
-<!-- Privacy Extension for WhatsApp(TM) Web                       -->
-<!-- Copyright (c) 2024 Lukas Lenhardt - lukaslen.com             -->
-<!-- Released under the MIT license, see LICENSE file for details -->
+<!-- Privacy for WhatsApp Web (Auto Blur WA)                           -->
+<!-- Original Copyright (c) 2024 Lukas Lenhardt - lukaslen.com         -->
+<!-- Fork & Maintenance Copyright (c) 2026 M Aryo Muzakki - muzakki.id -->
+<!-- Released under the MIT license, see LICENSE file for details      -->
 
 <!DOCTYPE html>
   <html>
@@ -8,7 +9,7 @@
       <meta charset="UTF-8">
       <style>
         :root {
-          --primary-color: #25d366;
+          --primary-color: #17CC3E;
           --bg-color: #ffffff;
           --bg-color-toggle-disable: #cacaca;
           --bg-color-submit-btn: #eeeeee;
@@ -23,14 +24,15 @@
           --text-color-link: #00587f;
         }
         :root:has(body[data-theme="dark"]) {
-          --bg-color: #373737;
-          --bg-color-toggle-disable: #787878;
-          --bg-color-submit-btn: #555555;
-          --bg-color-submit-btn-hover: #666666;
+          --primary-color: #1b9836;
+          --bg-color: #212121;
+          --bg-color-toggle-disable: #4d4d4d;
+          --bg-color-submit-btn: #2e2e2e;
+          --bg-color-submit-btn-hover: #616161;
           --scrollbar-thumb-color: #7f7f7f;
           --scrollbar-bg-color: #2d2d2d;
-          --border-color-blur-input: #999999;
-          --border-line-color: #888888;
+          --border-color-blur-input: #4d4d4d;
+          --border-line-color: #474747;
           --text-color: #dedede;
           --text-color-unit: #cccccc;
           --text-color-reset: #ff7676;
@@ -52,6 +54,7 @@
           padding: 10px 0 10px 12px;
           -moz-user-select: none;
           user-select: none;
+          transition: color .3s, background-color .3s;
         }
         hr {
           border: 0.5px solid var(--border-line-color);
@@ -66,19 +69,23 @@
         .header-group {
           display: flex;
           align-items: center;
+          flex: 1;
         }
-        img {
+        .header-group img {
           margin-left: 5px;
+          width: 28px;
+          height: 28px;
+          flex-shrink: 0;
         }
         h1 {
           font-size: larger;
-          margin-left: 14px;
+          margin-left: 12px;
           display: block;
         }
         .theme-toggle {
           position: relative;
-          width: 30px;
-          height: 30px;
+          width: 28px;
+          height: 28px;
           margin-bottom: 0;
           color: var(--primary-color);
           border: 1px solid var(--primary-color);
@@ -90,6 +97,7 @@
           outline: 2px solid transparent;
           outline-offset: 2px;
           cursor: pointer;
+          flex-shrink: 0;
         }
         .theme-toggle:hover {
           background-color: var(--primary-color);
@@ -163,6 +171,7 @@
           width: 100%;
           z-index: 2;
           height: 6px;
+          transition: none !important;
         }
         #mainContent > .wrapper > .top-edge {
           --degree: 180deg;
@@ -545,7 +554,7 @@
       <header>
         <div class="header-group">
           <img src="../images/icon32.png" alt="">
-          <h1>Privacy Extension<br>For WhatsApp Web</h1>
+          <h1>Privacy for WhatsApp Web (Auto Blur WA)</h1>
         </div>
         <button class="theme-toggle" data-localetitle="toggleTheme">
           <!-- tabler:sun -->
@@ -583,8 +592,8 @@
           <locales data-locale="extensionSettings"></locales>
         </h2>
         <div class="wrapper">
-          <div class="top-edge"></div>
-          <div class="bottom-edge"></div>
+          <!-- <div class="top-edge"></div> -->
+          <!-- <div class="bottom-edge"></div> -->
           <ul>
             <li>
               <locales data-locale="toggleMessages"></locales>
@@ -858,8 +867,8 @@
       <span id="popupMessage"></span>
       <div id="footer">
         <hr style="margin-top: 2px;">
-        <p><a href="mailto:contact@lukaslen.com" data-localetitle="footerBugReportsDescription" target="_blank"><locales data-locale="footerBugReports"></locales></a> - <a href="https://lukaslen.com" title="by Lukas Lenhardt" target="_blank"><locales data-locale="footerAuthor"></locales></a>
-        <br>v<span id="version">0.0.0</span> - <a href="https://github.com/LukasLen/Privacy-Extension-For-WhatsApp-Web/releases" data-localetitle="footerReleaseNotesDescription" target="_blank"><locales data-locale="footerReleaseNotes"></locales></a></p>
+        <p><a href="https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur/issues" data-localetitle="footerBugReportsDescription" target="_blank"><locales data-locale="footerBugReports"></locales></a> - <a href="https://muzakki.id" title="by M Aryo Muzakki" target="_blank"><locales data-locale="footerAuthor"></locales></a>
+        <br>v<span id="version">0.0.0</span> - <a href="https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur/releases" data-localetitle="footerReleaseNotesDescription" target="_blank"><locales data-locale="footerReleaseNotes"></locales></a></p>
       </div>
       
       <div id="toast-container"></div>

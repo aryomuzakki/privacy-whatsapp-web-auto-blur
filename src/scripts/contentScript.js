@@ -1,6 +1,7 @@
-/* Privacy Extension for WhatsApp(TM) Web                       */
-/* Copyright (c) 2024 Lukas Lenhardt - lukaslen.com             */
-/* Released under the MIT license, see LICENSE file for details */
+/* Privacy for WhatsApp Web (Auto Blur WA)                           */
+/* Original Copyright (c) 2024 Lukas Lenhardt - lukaslen.com         */
+/* Fork & Maintenance Copyright (c) 2026 M Aryo Muzakki - muzakki.id */
+/* Released under the MIT license, see LICENSE file for details      */
 
 // Remove this upon Chrome supporting the browser namespace
 if (typeof browser == "undefined") {

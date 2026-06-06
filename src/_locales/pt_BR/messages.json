@@ -1,6 +1,6 @@
 {
     "extensionName": {
-        "message": "Extensão de Privacidade para o WhatsApp Web"
+        "message": "Privacidade para o WhatsApp Web (Desfoque Automático)"
     },
     "extensionDescription": {
         "message": "Oculta suas mensagens até que você passe o mouse sobre elas."
@@ -144,7 +144,7 @@
         "message": "Relatórios de bugs & Sugestões"
     },
     "footerBugReportsDescription": {
-        "message": "Se você encontrar problemas ou tiver uma solicitação de recurso, envie um e-mail para: contact@lukaslen.com"
+        "message": "Se você encontrar problemas ou tiver uma solicitação de recurso, abra um issue no GitHub."
     },
     "footerAuthor": {
         "message": "Autor"
