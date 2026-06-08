@@ -29,7 +29,8 @@ div[data-testid=msg-container] /* normal message text */
 }
 
 /* updated wa version (v2.3000.xx) */
-div[data-testid=msg-container] /* normal message text more padding */
+div[data-testid=msg-container] > span:first-child ~ div:nth-child(2) /* normal message text more padding */,
+div[data-testid=msg-container] > div:first-child /* normal extra message text more padding */
 {
   padding-right: 36px !important; /* extra right padding to prevent covered text */
 }

@@ -128,10 +128,19 @@ const showToast = (message, duration = 3000, persistent = false) => {
   const container = document.getElementById('toast-container');
   const toast = document.createElement('div');
   toast.className = 'toast';
-  toast.innerHTML = `
-      <p class="msg">${message}</p>
-      ${persistent ? `<button class="toast-close-btn">×</button>` : ""}
-    `;
+
+  const p = document.createElement('p');
+  p.className = 'msg';
+  p.textContent = message;
+  toast.appendChild(p);
+
+  if (persistent) {
+    const btn = document.createElement('button');
+    btn.className = 'toast-close-btn';
+    btn.textContent = '×';
+    toast.appendChild(btn);
+  }
+
   container.appendChild(toast);
 
   const removeToast = (toast) => {

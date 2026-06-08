@@ -28,7 +28,7 @@ div.x6s0dn4.xhslqc4.x78zum5.x1f6kntn.xd4r4e8.x1gslohp.xvrgn94.x1yc453h > span /*
 div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xeuugli.x2lwn1j.xozqiw3.x1oa3qoh.x12fk4p8.x6ikm8r.x10wlt62.xuxw1ft.xlyipyv.x9f619.xggjnk3 span._ao3e /* community name in group details info */,
 div[role="button"].x78zum5.xdt5ytf.x1iyjqo2.xl56j7k.xeuugli > div:nth-child(1) /* user/group name at the top of chat panel */,
 div[role="button"].x78zum5.xdt5ytf.x1iyjqo2.xl56j7k.xeuugli > div:nth-child(2) /* user/group details at the top of chat panel */,
-div:where(._amk4, ._amk6) div.x193iq5w.xj9w6cj.x19v9tvf.xk50ysn /* user name in group chat messages */,
+div:has(>span[data-testid=author]) /* user name in group chat messages */,
 div.x12lumcd.x6ikm8r.x10wlt62 /* user name in contact attachment */,
 div.xs83m0k.x1iyjqo2.xdl72j9.x18wx58x.x6ikm8r.x10wlt62 /* user name in multiple contacts attachment */,
 div.overlay ._ak8q /* user name in overlay media view */,
@@ -72,7 +72,7 @@ div.x6s0dn4.xhslqc4.x78zum5.x1f6kntn.xd4r4e8.x1gslohp.xvrgn94.x1yc453h > span:ho
 div.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.xeuugli.x2lwn1j.xozqiw3.x1oa3qoh.x12fk4p8.x6ikm8r.x10wlt62.xuxw1ft.xlyipyv.x9f619.xggjnk3 span._ao3e:hover /* community name in group details info */,
 div[role="button"].x78zum5.xdt5ytf.x1iyjqo2.xl56j7k.xeuugli > div:nth-child(1):hover /* user/group name at the top of chat panel */,
 div[role="button"].x78zum5.xdt5ytf.x1iyjqo2.xl56j7k.xeuugli > div:nth-child(2):hover /* user/group details at the top of chat panel */,
-div:where(._amk4, ._amk6) div.x193iq5w.xj9w6cj.x19v9tvf.xk50ysn:hover /* user name in group chat messages */,
+div:has(>span[data-testid=author]):hover /* user name in group chat messages */,
 div.x12lumcd.x6ikm8r.x10wlt62:hover /* user name in contact attachment */,
 div.xs83m0k.x1iyjqo2.xdl72j9.x18wx58x.x6ikm8r.x10wlt62:hover /* user name in multiple contacts attachment */,
 div.overlay ._ak8q:hover /* user name in overlay media view */,
@@ -94,7 +94,6 @@ div._ak1d > div:first-child > div:first-child > :not(:first-child):hover /* user
 
 /* updated wa version (v2.3000.xx) */
 /* prevent cropped blur */
-div._ak1d > div:first-child > div:first-child /* user/group name in starred message list */
-{
+div._ak1d > div:first-child > div:first-child /* user/group name in starred message list */ {
   overflow: visible;
 }

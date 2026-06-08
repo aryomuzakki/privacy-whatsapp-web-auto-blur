@@ -6,7 +6,7 @@ body {
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif;
-  font-size: larger;
+  font-size: 1.25rem;
   font-weight: 400;
   color: #525252;
   background-color: #e0fbe6;
@@ -85,7 +85,7 @@ a {
 
 p.download {
   color: gray;
-  font-size: medium;
+  font-size: 1rem;
   font-style: italic;
   margin-top: 10px;
 }
@@ -102,6 +102,13 @@ p.download {
   height: 100%;
   object-fit: contain;
   border-radius: 12px;
+  transition: opacity 0.15s ease;
+}
+.screenshots img:hover {
+  opacity: 0.75;
+}
+.screenshots img:active {
+  opacity: 0.5;
 }
 p {
   text-align: justify;
@@ -116,23 +123,72 @@ li {
 }
 .install {
   margin-top: 20px;
+  display: grid;
+  gap: 1rem;
 }
 .disclaimer {
   margin-top: 100px;
   color: gray;
   font-style: italic;
-  font-size: smaller;
+  font-size: 1rem;
   line-height: normal;
   text-align: center;
 }
 .legal,
 .legal a {
-  color: #5c636e;
-  font-size: small;
+  font-size: 1rem;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 1rem;
   text-decoration: none;
 }
 .legal a:hover {
   text-decoration: underline;
+}
+
+.notice-box {
+  background: #edf7ef;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 1.125rem;
+  border-left: 4px solid #17cc3e;
+}
+
+.badges {
+  height: 60px;
+  display: flex;
+  gap: 2rem;
+  margin: 20px 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.badges div,
+.badges a {
+  display: flex;
+}
+.badges a:hover img {
+  opacity: 0.75;
+}
+.badges a:active img {
+  opacity: 0.5;
+}
+
+.badges img {
+  max-width: 100%;
+  width: auto;
+  height: 100%;
+  transition: opacity 0.15s ease;
+  object-fit: contain;
+}
+
+.badge-disabled {
+  height: 80%;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+  opacity: 0.5;
+  filter: grayscale(1);
+  display: flex;
+  flex-flow: column;
 }

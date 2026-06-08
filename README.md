@@ -38,7 +38,17 @@ To change this navigate to:
 
 ## Installation
 
-_(Links to the Chrome Web Store and Firefox Add-ons will be added once published)_
+### Chrome
+
+**Official Chrome webstore page**: https://chromewebstore.google.com/detail/privacy-for-whatsapp-web/fbinmigdlajillpobajlalknjinccgem?utm_source=readme
+
+### Microsoft Edge
+
+Open the chrome webstore page link on microsoft edge and click `Get` button
+
+### Mozilla Firefox
+
+**Official Firefox Add-on page**: _(Link to be added once published)_
 
 ### For development purposes on Chrome
 
@@ -65,4 +75,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 > This extension does not collect information about you or your messages. Visit the [privacy policy](https://pfwa.muzakki.id/privacy-policy/) to learn more.
 >
-> **_Disclaimer:_** _WhatsApp is a trademark of WhatsApp Inc., registered in the U.S. and other countries. This extension is an independent project and has no relationship to WhatsApp or WhatsApp Inc._
+> **_Disclaimer:_** _WhatsApp is a trademark of WhatsApp LLC, a subsidiary of Meta Platforms, Inc., registered in the U.S. and other countries. This extension is an independent project and has no relationship with WhatsApp, WhatsApp LLC, or Meta Platforms, Inc._

@@ -3,7 +3,7 @@
   "default_locale": "en",
   "name": "__MSG_extensionName__",
   "description": "__MSG_extensionDescription__",
-  "version": "3.3.2",
+  "version": "3.4.1",
   "action": {
     "default_title": "__MSG_extensionName__",
     "default_popup": "popup/popup.html",
@@ -22,15 +22,17 @@
   "permissions": ["storage"],
   "host_permissions": ["https://web.whatsapp.com/*"],
   "background": {
-    "scripts": ["background.js"],
-    "service_worker": "background.js"
+    "scripts": ["background.js"]
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "contact@mail.com",
-      "strict_min_version": "121.0"
+      "id": "@privacy-for-whatsapp-web-auto-blur-wa.aryomuzakki",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
-  },  
+  },
   "content_scripts": [
     {
       "matches": ["https://web.whatsapp.com/*"],
