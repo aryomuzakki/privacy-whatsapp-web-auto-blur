@@ -11,7 +11,37 @@
 
 To increase privacy in public spaces, Privacy for WhatsApp Web (Auto Blur WA) blurs your messages. Your messages and other content only reveals upon hovering over with your mouse cursor. Additionally you can quickly toggle all effects by using a keyboard shortcut or by clicking the toggle button in the extension menu.
 
-**Customize it**
+---
+
+<details>
+
+<summary>
+Table of Contents (Click to Show/Hide)
+</summary>
+
+---
+
+## Table of Contents
+
+- [Customize it](#customize-it)
+  - [Quick Toggle](#quick-toggle)
+- [Installation](#installation)
+  - [Chrome](#chrome)
+  - [Microsoft Edge](#microsoft-edge)
+  - [Mozilla Firefox](#mozilla-firefox)
+  - [Manual Load](#manual-load)
+- [Issues and Feature Requests](#issues-and-feature-requests)
+- [Development Guide](#development-guide)
+  - [Quickstart for Chrome](#quickstart-for-chrome)
+  - [Quickstart for Firefox](#quickstart-for-firefox)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+</details>
+
+---
+
+## Customize it
 
 It adapts to your needs by letting you decide which elements you want to blur. Your options:
 
@@ -28,7 +58,7 @@ It adapts to your needs by letting you decide which elements you want to blur. Y
 - Advanced Settings: _Customize the blur amount (in pixels) for various elements independently and set the idle timeout duration._
 - Theme Toggle: _Switch between Light, Dark, or System Preference theme for the extension._
 
-**Quick Toggle**
+### Quick Toggle
 
 You can quickly toggle the blur in the settings or with a keyboard shortcut (Default: Alt+X).
 To change this navigate to:
@@ -48,20 +78,51 @@ Open the chrome webstore page link on microsoft edge and click `Get` button
 
 ### Mozilla Firefox
 
-**Official Firefox Add-on page**: _(Link to be added once published)_
+**Official Firefox Add-on page**: https://addons.mozilla.org/en-US/firefox/addon/privacy-for-whatsapp-web/
 
-### For development purposes on Chrome
+### Manual Load
 
-- Download the newest release [here](https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur/releases) and unzip it
-- Navigate to [chrome://extensions](chrome://extensions)
-- Activate the developer mode (on the top right)
-- Click on "Load Unpacked"
-- Select the `/src` folder from your unzipped download (this folder has to be persistent so you might want to keep it somewhere where you won't delete it)
-- Check back here for new releases
+If you prefer to load the extension manually without using the web stores:
+
+1. Download the newest release [here](https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur/releases). Make sure to choose the respective zip file formatted for your browser (`[release_version]-[browser]-pfwa.zip`, e.g., `v3.4.1-chrome-pfwa.zip` or `v3.4.1-firefox-pfwa.zip`) and unzip it.
+2. For **Chrome / Edge**:
+   - Navigate to [chrome://extensions](chrome://extensions)
+   - Activate the developer mode (on the top right)
+   - Click on "Load Unpacked"
+   - Select the unzipped folder (this folder has to be persistent so you might want to keep it somewhere where you won't delete it)
+3. For **Firefox**:
+   - Navigate to [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox)
+   - Click on "Load Temporary Add-on..."
+   - Select the `manifest.json` file from your unzipped folder
+4. Check back on the releases page for new updates
 
 ## Issues and Feature Requests
 
 If you have a feature request or encountered a problem, please create a new issue under this link: [https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur/issues](https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur/issues)
+
+## Development Guide
+
+If you want to modify the extension code or run it directly from the source repository:
+
+### Quickstart for Chrome
+
+- Clone the repository
+- Navigate to [chrome://extensions](chrome://extensions)
+- Activate the developer mode (on the top right)
+- Click on "Load Unpacked"
+- Select the `/src` folder from the cloned repository
+- You can edit the CSS and JS files in `/src`.
+
+### Quickstart for Firefox
+
+- Clone the repository
+- Rename `src/manifest_firefox.json` into `manifest.json` (replacing the existing Chrome `manifest.json`, which you can optionally rename to `manifest_chrome.json`)
+- Navigate to [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox)
+- Click on "Load Temporary Add-on..."
+- Select the `manifest.json` file from the `/src` folder
+- You can edit the CSS and JS files in `/src`.
+
+> Make sure to check and edit `src/css/noDelay.css` and `src/css/unblurActive.css` too if the old class exists there when making styling changes.
 
 ## License
 
