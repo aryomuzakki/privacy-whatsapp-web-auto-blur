@@ -84,7 +84,7 @@ Open the chrome webstore page link on microsoft edge and click `Get` button
 
 If you prefer to load the extension manually without using the web stores:
 
-1. Download the newest release [here](https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur/releases). Make sure to choose the respective zip file formatted for your browser (`[release_version]-[browser]-pfwa.zip`, e.g., `v3.4.1-chrome-pfwa.zip` or `v3.4.1-firefox-pfwa.zip`) and unzip it.
+1. Download the newest release [here](https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur/releases). Make sure to choose the respective zip file formatted for your browser (`[release_version]-[browser]-pfwa.zip`, e.g., `v3.4.2-chrome-pfwa.zip` or `v3.4.2-firefox-pfwa.zip`) and unzip it.
 2. For **Chrome / Edge**:
    - Navigate to [chrome://extensions](chrome://extensions)
    - Activate the developer mode (on the top right)
