@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/aryomuzakki/privacy-whatsapp-web-auto-blur.svg)](https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur/blob/main/LICENSE)
 
-> **Note on Revival**: This is a revived and actively maintained fork of the original [Privacy-Extension-For-WhatsApp-Web](https://github.com/LukasLen/Privacy-Extension-For-WhatsApp-Web) by Lukas Lenhardt. As the original extension has been unmaintained and WhatsApp Web continues to update, I (a former collaborator) have decided to release this version to ensure the community still has a working, up-to-date privacy tool.
+> **Note on Maintenance**: The Original extension is maintained at [pfwa.muzakki.id](https://pfwa.muzakki.id) (repository: [Privacy-Extension-For-WhatsApp-Web](https://github.com/aryomuzakki/Privacy-Extension-For-WhatsApp-Web)), with the original style, layout, and settings. This is the Modern version of the extension ([Privacy for WhatsApp Web (Auto Blur WA)](https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur) at [blurwa.muzakki.id](https://blurwa.muzakki.id)), featuring more advanced settings.
 
 <p align="center">
   <img width="48%" title="WhatsApp™ Web with the extension" alt="WhatsApp™ Web with the extension" src="https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur/blob/main/screenshots/PFWA_Header.png?raw=true">
