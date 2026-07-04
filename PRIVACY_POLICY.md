@@ -35,6 +35,6 @@ Code: https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur
 
 Maintainer: [M Aryo Muzakki](https://muzakki.id)
 
-Contact: aryo.muzakki@gmail.com
+Contact: support@blurwa.muzakki.id
 
-Homepage: [Privacy for WhatsApp Web (Auto Blur WA)](https://pfwa.muzakki.id)
+Homepage: [Privacy for WhatsApp Web (Auto Blur WA)](https://blurwa.muzakki.id)

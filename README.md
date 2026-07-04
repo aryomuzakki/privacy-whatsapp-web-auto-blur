@@ -84,7 +84,7 @@ Open the chrome webstore page link on microsoft edge and click `Get` button
 
 If you prefer to load the extension manually without using the web stores:
 
-1. Download the newest release [here](https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur/releases). Make sure to choose the respective zip file formatted for your browser (`[release_version]-[browser]-pfwa.zip`, e.g., `v3.4.2-chrome-pfwa.zip` or `v3.4.2-firefox-pfwa.zip`) and unzip it.
+1. Download the newest release [here](https://github.com/aryomuzakki/privacy-whatsapp-web-auto-blur/releases). Make sure to choose the respective zip file formatted for your browser (`[release_version]-[browser]-blurwa.zip`, e.g., `v3.4.2-chrome-blurwa.zip` or `v3.4.2-firefox-blurwa.zip`) and unzip it.
 2. For **Chrome / Edge**:
    - Navigate to [chrome://extensions](chrome://extensions)
    - Activate the developer mode (on the top right)
@@ -134,6 +134,6 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ---
 
-> This extension does not collect information about you or your messages. Visit the [privacy policy](https://pfwa.muzakki.id/privacy-policy/) to learn more.
+> This extension does not collect information about you or your messages. Visit the [privacy policy](https://blurwa.muzakki.id/privacy-policy/) to learn more.
 >
 > **_Disclaimer:_** _WhatsApp is a trademark of WhatsApp LLC, a subsidiary of Meta Platforms, Inc., registered in the U.S. and other countries. This extension is an independent project and has no relationship with WhatsApp, WhatsApp LLC, or Meta Platforms, Inc._
