@@ -122,11 +122,12 @@ div.xkhd6sd._ajxt > ._ajxu > div:hover /* business phone number in details info 
 div._ak1d > div:first-child > div:first-child > :not(:first-child):hover /* user/group name in starred message list */,
 
 /* profilePic */
-div.x78zum5>div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x1y332i5.x18d9i69.xexx8yu.x1cbfl22.xbmws1g > div:hover /* user/group profile pic in message list */,
+div[role="gridcell"] .xbmws1g > div:hover /* user/group profile pic in message list */,
+div[role="listitem"] .xbmws1g > div:hover /* user/group profile pic in archived message list */,
 div[role="listitem"] ._ak8h:not(:has([data-icon="community-group"])):hover /* user/group profile pic in archived message list */,
 div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x18d9i69.xexx8yu.x1pic42t.xe2zdcy > div:hover /* user/group profile pic in details list and popup list */,
 div[role="dialog"] ._ak8h:hover /* user/group profile pic in popup list */,
-header div[role="button"]:first-child div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p:hover /* user/group profile pic at the top of chat panel */,
+header div[role="button"]:first-child img:hover /* user/group profile pic at the top of chat panel */,
 header .html-span div.x1n2onr6.x1f2iure.x1fgtraw.xgd8bvy:hover /* community profile pic in community subgroup switcher */,
 div.x16ye13r.x10l6tqk.x1wnpwf8.x1vjfegm div[role="button"]:hover /* user profile pic in group chat messages */,
 div.x1okw0bk.x1yh7se0 div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p:hover /* user profile pic in contact attachment */,
