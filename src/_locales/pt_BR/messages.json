@@ -17,6 +17,24 @@
     "extensionSettings": {
         "message": "Configurações"
     },
+    "privacySchedule": {
+        "message": "Agendamento de privacidade"
+    },
+    "privacyScheduleDescription": {
+        "message": "Ative e desative a privacidade automaticamente nos horários definidos."
+    },
+    "scheduleStart": {
+        "message": "Início"
+    },
+    "scheduleEnd": {
+        "message": "Fim"
+    },
+    "scheduleHelp": {
+        "message": "Usa o horário local do navegador. Alterações manuais valem até o próximo horário agendado."
+    },
+    "scheduleInvalid": {
+        "message": "Os horários de início e fim precisam ser diferentes."
+    },
     "toggleMessages": {
         "message": "Todas as mensagens no chat"
     },

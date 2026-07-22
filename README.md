@@ -25,6 +25,7 @@ Table of Contents (Click to Show/Hide)
 
 - [Customize it](#customize-it)
   - [Quick Toggle](#quick-toggle)
+  - [Privacy Schedule](#privacy-schedule)
 - [Installation](#installation)
   - [Chrome](#chrome)
   - [Microsoft Edge](#microsoft-edge)
@@ -55,6 +56,7 @@ It adapts to your needs by letting you decide which elements you want to blur. Y
 - No transition delay: _Allows you to turn off the delay before revealing an item on hover._
 - Unblur all on app hover: _Unblurs all elements when you hover over the WhatsApp Web app._
 - Blur WhatsApp on Idle: _Blurs WhatsApp when there is no mouse/keyboard activity after a certain time._
+- Privacy schedule: _Automatically enables and disables privacy at chosen times each day._
 - Advanced Settings: _Customize the blur amount (in pixels) for various elements independently and set the idle timeout duration._
 - Theme Toggle: _Switch between Light, Dark, or System Preference theme for the extension._
 
@@ -65,6 +67,10 @@ To change this navigate to:
 
 - Chrome: [chrome://extensions/shortcuts](chrome://extensions/shortcuts)
 - Firefox: [about:addons](about:addons) -> Settings icon on the top right -> Manage Extension Shortcuts
+
+### Privacy Schedule
+
+The privacy schedule is optional and disabled by default. It uses your browser's local time and supports schedules that cross midnight. You can still toggle privacy manually while it is enabled; the manual choice remains in place until the next scheduled start or end time.
 
 ## Installation
 

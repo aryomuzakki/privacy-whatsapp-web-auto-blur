@@ -17,6 +17,24 @@
     "extensionSettings": {
         "message": "Einstellungen"
     },
+    "privacySchedule": {
+        "message": "Datenschutz-Zeitplan"
+    },
+    "privacyScheduleDescription": {
+        "message": "Datenschutz automatisch zu festgelegten Zeiten ein- und ausschalten."
+    },
+    "scheduleStart": {
+        "message": "Start"
+    },
+    "scheduleEnd": {
+        "message": "Ende"
+    },
+    "scheduleHelp": {
+        "message": "Verwendet die lokale Browserzeit. Manuelle Änderungen gelten bis zum nächsten geplanten Zeitpunkt."
+    },
+    "scheduleInvalid": {
+        "message": "Start- und Endzeit müssen unterschiedlich sein."
+    },
     "toggleMessages": {
         "message": "Alle Nachrichten im Chat"
     },
