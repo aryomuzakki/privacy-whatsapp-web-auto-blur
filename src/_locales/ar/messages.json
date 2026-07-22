@@ -1,0 +1,176 @@
+{
+    "extensionName": {
+        "message": "الخصوصية لواتساب ويب (تمويه تلقائي)"
+    },
+    "extensionDescription": {
+        "message": "يُموّه تلقائيًا الرسائل والوسائط والأسماء والمزيد في واتساب ويب حتى تمرر مؤشر الفأرة فوقها. نسخة مجتمعية تتم صيانتها باستمرار"
+    },
+    "extensionShortcut": {
+        "message": "تشغيل/إيقاف"
+    },
+    "extensionToggle": {
+        "message": "تشغيل/إيقاف"
+    },
+    "extensionToggleDescription": {
+        "message": "تشغيل الإضافة أو إيقافها"
+    },
+    "extensionSettings": {
+        "message": "الإعدادات"
+    },
+    "privacySchedule": {
+        "message": "جدول الخصوصية"
+    },
+    "privacyScheduleDescription": {
+        "message": "تشغيل الخصوصية وإيقافها تلقائيًا في أوقات محددة."
+    },
+    "scheduleStart": {
+        "message": "البداية"
+    },
+    "scheduleEnd": {
+        "message": "النهاية"
+    },
+    "scheduleHelp": {
+        "message": "يستخدم التوقيت المحلي للمتصفح. تستمر التغييرات اليدوية حتى الموعد المجدول التالي."
+    },
+    "scheduleInvalid": {
+        "message": "يجب أن يختلف وقت البداية عن وقت النهاية."
+    },
+    "toggleMessages": {
+        "message": "جميع الرسائل في المحادثة"
+    },
+    "toggleMessagesDescription": {
+        "message": "يُموّه جميع الرسائل في المحادثة."
+    },
+    "toggleMessagesPreview": {
+        "message": "معاينة آخر الرسائل"
+    },
+    "toggleMessagesPreviewDescription": {
+        "message": "يُموّه جميع معاينات الرسائل في القائمة الجانبية."
+    },
+    "toggleMediaPreview": {
+        "message": "معاينة الوسائط"
+    },
+    "toggleMediaPreviewDescription": {
+        "message": "يُموّه الصور ومقاطع الفيديو والملصقات وغيرها بشكل منفصل عن النص."
+    },
+    "toggleMediaGallery": {
+        "message": "معرض الوسائط"
+    },
+    "toggleMediaGalleryDescription": {
+        "message": "يُموّه أيقونات معاينة الصور ومقاطع الفيديو وغيرها عند عرض أحدها."
+    },
+    "toggleTextInput": {
+        "message": "حقل إدخال النص"
+    },
+    "toggleTextInputDescription": {
+        "message": "يجعل لون النص في حقل الإدخال أفتح ليصعب قراءته."
+    },
+    "toggleProfilePic": {
+        "message": "صور الملف الشخصي"
+    },
+    "toggleProfilePicDescription": {
+        "message": "يُموّه جميع صور الملف الشخصي."
+    },
+    "toggleName": {
+        "message": "أسماء المجموعات والمستخدمين"
+    },
+    "toggleNameDescription": {
+        "message": "يُموّه جميع أسماء المجموعات والمستخدمين."
+    },
+    "toggleNoDelay": {
+        "message": "بدون تأخير للانتقال"
+    },
+    "toggleNoDelayDescription": {
+        "message": "يتيح إلغاء التأخير قبل إظهار العنصر عند تمرير المؤشر فوقه."
+    },
+    "toggleUnblurActive": {
+        "message": "إلغاء التمويه عند تمرير المؤشر فوق التطبيق"
+    },
+    "toggleUnblurActiveDescription": {
+        "message": "يلغي تمويه جميع العناصر عند تمرير المؤشر فوق تطبيق واتساب ويب."
+    },
+    "toggleBlurOnIdle": {
+        "message": "تمويه واتساب عند الخمول"
+    },
+    "toggleBlurOnIdleDescription": {
+        "message": "يُموّه واتساب بعد مدة محددة من عدم استخدام الفأرة أو لوحة المفاتيح."
+    },
+    "toggleTheme": {
+        "message": "التبديل بين المظهر الفاتح أو الداكن أو إعداد النظام"
+    },
+    "openAdvancedSettings": {
+        "message": "فتح الإعدادات المتقدمة"
+    },
+    "cancel": {
+        "message": "إلغاء"
+    },
+    "resetValue": {
+        "message": "إعادة القيمة الافتراضية"
+    },
+    "toastSaved": {
+        "message": "تم الحفظ!"
+    },
+    "blurInputLabel": {
+        "message": "مقدار التمويه"
+    },
+    "msBlurInputDescription": {
+        "message": "تعيين مقدار التمويه لجميع الرسائل (بالبكسل)."
+    },
+    "mspBlurInputDescription": {
+        "message": "تعيين مقدار التمويه لمعاينات الرسائل (بالبكسل)."
+    },
+    "mdpBlurInputDescription": {
+        "message": "تعيين مقدار التمويه لمعاينة الوسائط (بالبكسل)."
+    },
+    "mdgBlurInputDescription": {
+        "message": "تعيين مقدار التمويه لمعرض الوسائط (بالبكسل)."
+    },
+    "ppSmBlurInputLabel": {
+        "message": "مقدار تمويه الصور الصغيرة"
+    },
+    "ppSmBlurInputDescription": {
+        "message": "تعيين مقدار التمويه لصور الملف الشخصي الصغيرة (بالبكسل)."
+    },
+    "ppBlurInputLabel": {
+        "message": "مقدار تمويه الصور بالحجم العادي"
+    },
+    "ppBlurInputDescription": {
+        "message": "تعيين مقدار التمويه لصور الملف الشخصي بالحجم العادي (بالبكسل)."
+    },
+    "ppLgBlurInputLabel": {
+        "message": "مقدار تمويه الصور الكبيرة"
+    },
+    "ppLgBlurInputDescription": {
+        "message": "تعيين مقدار التمويه لصور الملف الشخصي الكبيرة (بالبكسل)."
+    },
+    "nmBlurInputDescription": {
+        "message": "تعيين مقدار التمويه لأسماء المجموعات والمستخدمين (بالبكسل)."
+    },
+    "itBlurInputLabel": {
+        "message": "مهلة الخمول"
+    },
+    "itBlurInputDescription": {
+        "message": "تعيين مدة الخمول (بالثواني)."
+    },
+    "wiBlurInputLabel": {
+        "message": "مقدار التمويه"
+    },
+    "wiBlurInputDescription": {
+        "message": "تعيين مقدار التمويه عند الخمول."
+    },
+    "footerBugReports": {
+        "message": "تقارير الأخطاء والاقتراحات"
+    },
+    "footerBugReportsDescription": {
+        "message": "إذا واجهت مشكلة أو كان لديك اقتراح، فيُرجى فتح بلاغ في مستودع GitHub."
+    },
+    "footerAuthor": {
+        "message": "المطوّر"
+    },
+    "footerReleaseNotes": {
+        "message": "ملاحظات الإصدار"
+    },
+    "footerReleaseNotesDescription": {
+        "message": "عرض ملاحظات الإصدار."
+    }
+}
