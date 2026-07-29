@@ -19,8 +19,9 @@ const manifestContent = fs.readFileSync(manifestPath, "utf8");
 const manifest = JSON.parse(manifestContent);
 const version = manifest.version;
 
-// Prefix
-const prefix = process.argv[2] || "blurwa";
+// Prefix (ignore CLI flags starting with --)
+const argPrefix = process.argv.slice(2).find(arg => !arg.startsWith("--"));
+const prefix = argPrefix || "blurwa";
 
 const chromeZipName = `v${version}-chrome-${prefix}.zip`;
 const firefoxZipName = `v${version}-firefox-${prefix}.zip`;
@@ -77,10 +78,11 @@ if (fs.existsSync(firefoxZipPath)) {
 }
 
 createZip(TEMP_DIR, firefoxZipPath);
-console.log(`[Firefox] Zip created successfully at ${firefoxZipPath}\n`);
-
-// 4. Cleanup temporary directory
-console.log(`Cleaning up temporary files...`);
-fs.rmSync(TEMP_DIR, { recursive: true, force: true });
+// 4. Cleanup temporary directory unless --keep-temp is specified
+const keepTemp = process.argv.includes("--keep-temp") || process.env.KEEP_TEMP === "true";
+if (!keepTemp) {
+  console.log(`Cleaning up temporary files...`);
+  fs.rmSync(TEMP_DIR, { recursive: true, force: true });
+}
 
 console.log(`\nDone! Both extensions have been packaged.`);
