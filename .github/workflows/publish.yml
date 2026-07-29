@@ -3,12 +3,17 @@ name: Build & Publish Extension
 on:
   push:
     tags:
-      - "v*"
+      - 'v*'
   workflow_dispatch:
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      CHROME_CLIENT_ID: ${{ secrets.CHROME_CLIENT_ID }}
+      CHROME_EXTENSION_ID: ${{ secrets.CHROME_EXTENSION_ID }}
+      AMO_JWT_ISSUER: ${{ secrets.AMO_JWT_ISSUER }}
+      AMO_ADDON_ID: ${{ secrets.AMO_ADDON_ID }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -33,21 +38,21 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload to Chrome Web Store
-        if: ${{ secrets.CHROME_CLIENT_ID != '' && secrets.CHROME_EXTENSION_ID != '' }}
+        if: ${{ env.CHROME_CLIENT_ID != '' && env.CHROME_EXTENSION_ID != '' }}
         uses: chrome-stats/chrome-extension-upload-action@v2
         with:
           extension-id: ${{ secrets.CHROME_EXTENSION_ID }}
-          zip-path: "v${{ github.ref_name }}-chrome-blurwa.zip"
+          zip-path: 'v${{ github.ref_name }}-chrome-blurwa.zip'
           client-id: ${{ secrets.CHROME_CLIENT_ID }}
           client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
           refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
 
       - name: Upload to Firefox Add-ons (AMO)
-        if: ${{ secrets.AMO_JWT_ISSUER != '' && secrets.AMO_ADDON_ID != '' }}
+        if: ${{ env.AMO_JWT_ISSUER != '' && env.AMO_ADDON_ID != '' }}
         uses: w3bdesign/web-ext-submit-action@v2
         with:
           channel: listed
           addon-id: ${{ secrets.AMO_ADDON_ID }}
-          source-file: "v${{ github.ref_name }}-firefox-blurwa.zip"
+          source-file: 'v${{ github.ref_name }}-firefox-blurwa.zip'
           api-key: ${{ secrets.AMO_JWT_ISSUER }}
           api-secret: ${{ secrets.AMO_JWT_SECRET }}
