@@ -39,10 +39,10 @@ jobs:
 
       - name: Upload to Chrome Web Store
         if: ${{ env.CHROME_CLIENT_ID != '' && env.CHROME_EXTENSION_ID != '' }}
-        uses: mobilefirstllc/cws-upload@v1.9.0
+        uses: mnao305/chrome-extension-upload@v2.2.1
         with:
-          extension-id: ${{ secrets.CHROME_EXTENSION_ID }}
           file-path: "v${{ github.ref_name }}-chrome-blurwa.zip"
+          extension-id: ${{ secrets.CHROME_EXTENSION_ID }}
           client-id: ${{ secrets.CHROME_CLIENT_ID }}
           client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
           refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
