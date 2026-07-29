@@ -1,0 +1,53 @@
+name: Build & Publish Extension
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Package Extension Zips
+        run: bun build.js
+
+      - name: Create GitHub Release & Upload Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            *.zip
+          body: |
+            ### 🚀 Submission Status
+
+            - **Chrome Web Store**: [![Chrome Web Store - In Review](https://img.shields.io/badge/Chrome_Web_Store-in_review-orange?style=flat-square&logo=googlechrome&logoColor=white)](${{ secrets.CHROME_STORE_URL }})
+            - **Firefox Add-ons**: [![Firefox Add-ons - In Review](https://img.shields.io/badge/Firefox_Add--ons-in_review-orange?style=flat-square&logo=firefoxbrowser&logoColor=white)](${{ secrets.FIREFOX_STORE_URL }})
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload to Chrome Web Store
+        if: ${{ secrets.CHROME_CLIENT_ID != '' && secrets.CHROME_EXTENSION_ID != '' }}
+        uses: chrome-stats/chrome-extension-upload-action@v2
+        with:
+          extension-id: ${{ secrets.CHROME_EXTENSION_ID }}
+          zip-path: "v${{ github.ref_name }}-chrome-blurwa.zip"
+          client-id: ${{ secrets.CHROME_CLIENT_ID }}
+          client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+
+      - name: Upload to Firefox Add-ons (AMO)
+        if: ${{ secrets.AMO_JWT_ISSUER != '' && secrets.AMO_ADDON_ID != '' }}
+        uses: w3bdesign/web-ext-submit-action@v2
+        with:
+          channel: listed
+          addon-id: ${{ secrets.AMO_ADDON_ID }}
+          source-file: "v${{ github.ref_name }}-firefox-blurwa.zip"
+          api-key: ${{ secrets.AMO_JWT_ISSUER }}
+          api-secret: ${{ secrets.AMO_JWT_SECRET }}

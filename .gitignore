@@ -1,1 +1,6 @@
 .idea
+
+# generated build zip
+*.zip
+# temp folder for build src
+temp_build_src/

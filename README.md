@@ -34,6 +34,7 @@ Table of Contents (Click to Show/Hide)
 - [Development Guide](#development-guide)
   - [Quickstart for Chrome](#quickstart-for-chrome)
   - [Quickstart for Firefox](#quickstart-for-firefox)
+  - [Packaging Builds (Chrome & Firefox)](#packaging-builds-chrome--firefox)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
@@ -123,6 +124,23 @@ If you want to modify the extension code or run it directly from the source repo
 - You can edit the CSS and JS files in `/src`.
 
 > Make sure to check and edit `src/css/noDelay.css` and `src/css/unblurActive.css` too if the old class exists there when making styling changes.
+
+### Packaging Builds (Chrome & Firefox)
+
+To package the extension into ready-to-publish `.zip` files for Chrome and Firefox:
+
+- Ensure [Bun](https://bun.sh/) or [Node.js](https://nodejs.org/) is installed.
+- Run the build script in the repository root:
+  ```bash
+  bun build.js
+  # or using node
+  node build.js
+  ```
+- The script automatically creates:
+  - **Chrome Build**: `v[version]-chrome-[prefix].zip` containing the Chrome `manifest.json`.
+  - **Firefox Build**: `v[version]-firefox-[prefix].zip` with `manifest_firefox.json` automatically renamed to `manifest.json`.
+- The resulting `.zip` files can be loaded directly for testing or uploaded to the Chrome Web Store and Firefox Add-ons (AMO) developer consoles.
+- For fully automated building, release creation, and store publishing via GitHub Actions, see the [Automated Publishing Guide](AUTOMATED_PUBLISHING.md).
 
 ## License
 
