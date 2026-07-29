@@ -55,7 +55,7 @@ jobs:
         run: |
           bunx web-ext lint --source-dir "${{ github.ref_name }}-firefox-blurwa.zip"
           bunx web-ext sign \
-            --upload-file "${{ github.ref_name }}-firefox-blurwa.zip" \
+            --source-dir "${{ github.ref_name }}-firefox-blurwa.zip" \
             --channel listed \
             --api-key "${{ secrets.AMO_JWT_ISSUER }}" \
             --api-secret "${{ secrets.AMO_JWT_SECRET }}"
