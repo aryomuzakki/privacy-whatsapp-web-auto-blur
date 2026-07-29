@@ -8,10 +8,9 @@
 ._1Pr6q /*media preview in send media*/,
 
 /* updated wa version (v2.3000.xx) */
-div.overlay div.x1n2onr6.x78zum5.x6s0dn4.xl56j7k.xh8yej3.xeuugli.x5yr21d.xdt5ytf > div > div:first-child /* media in overlay view */,
+div.x1n2onr6.x78zum5.x6s0dn4.xl56j7k.xh8yej3.xeuugli.x5yr21d.xdt5ytf > div > div:first-child /* media in overlay view */,
 div.x1conndi /* media thumb in overlay view and details panel */,
-div[role="listitem"] button > div[style^="background-image"] /* media thumb in media gallery panel */
-{
+div[role="listitem"] button > div[style^="background-image"] /* media thumb in media gallery panel */ {
   filter: blur(var(--mdg-blur)) grayscale(1);
   transition-delay: 0s;
 }
@@ -21,10 +20,9 @@ div[role="listitem"] button > div[style^="background-image"] /* media thumb in m
 ._1Pr6q:hover /*media preview in send media*/,
 
 /* updated wa version (v2.3000.xx) */
-div.overlay div.x1n2onr6.x78zum5.x6s0dn4.xl56j7k.xh8yej3.xeuugli.x5yr21d.xdt5ytf > div > div:first-child:hover /* media in overlay view */,
+div.x1n2onr6.x78zum5.x6s0dn4.xl56j7k.xh8yej3.xeuugli.x5yr21d.xdt5ytf > div > div:first-child:hover /* media in overlay view */,
 div.x1conndi:hover /* media thumb in overlay view and details panel */,
-div[role="listitem"] button > div[style^="background-image"]:hover /* media thumb in media gallery panel */
-{
+div[role="listitem"] button > div[style^="background-image"]:hover /* media thumb in media gallery panel */ {
   filter: blur(0) grayscale(0);
   transition-delay: 0.1s;
   transition-duration: 0.15s;
@@ -32,7 +30,6 @@ div[role="listitem"] button > div[style^="background-image"]:hover /* media thum
 
 /* updated wa version (v2.3000.xx) */
 /* prevent cropped blur */
-div[role="dialog"] > .x10wlt62 /* media thumb in details panel */
-{
+div[role="dialog"] > .x10wlt62 /* media thumb in details panel */ {
   overflow: visible;
 }
