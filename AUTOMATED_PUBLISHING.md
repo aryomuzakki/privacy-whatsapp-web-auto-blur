@@ -46,7 +46,8 @@ To allow GitHub Actions to upload `.zip` builds to the Chrome Web Store:
    - Go to **APIs & Services** > **Library**, search for **Chrome Web Store API**, and click **Enable**.
 2. **OAuth 2.0 Client Credentials**:
    - Go to **APIs & Services** > **Credentials** > **Create Credentials** > **OAuth client ID**.
-   - Select Application type: **Desktop app**.
+   - Select Application type: **Web application**.
+   - Under **Authorized redirect URIs**, click **+ ADD URI** and add: `https://developers.google.com/oauthplayground`.
    - Copy your **Client ID** and **Client Secret**.
 3. **OAuth Refresh Token**:
    - Open [Google OAuth 2.0 Playground](https://developers.google.com/oauthplayground/).
