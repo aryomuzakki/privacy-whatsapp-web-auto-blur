@@ -44,7 +44,7 @@ jobs:
         if: ${{ env.CHROME_CLIENT_ID != '' && env.CHROME_EXTENSION_ID != '' }}
         uses: mnao305/chrome-extension-upload@v6.0.0
         with:
-          file-path: "v${{ github.ref_name }}-chrome-blurwa.zip"
+          file-path: "${{ github.ref_name }}-chrome-blurwa.zip"
           extension-id: ${{ secrets.CHROME_EXTENSION_ID }}
           client-id: ${{ secrets.CHROME_CLIENT_ID }}
           client-secret: ${{ secrets.CHROME_CLIENT_SECRET }}
@@ -53,9 +53,9 @@ jobs:
       - name: Lint & Upload to Firefox Add-ons (AMO)
         if: ${{ env.AMO_JWT_ISSUER != '' && env.AMO_ADDON_ID != '' }}
         run: |
-          bunx web-ext lint --source-dir "v${{ github.ref_name }}-firefox-blurwa.zip"
+          bunx web-ext lint --source-dir "${{ github.ref_name }}-firefox-blurwa.zip"
           bunx web-ext sign \
-            --upload-file "v${{ github.ref_name }}-firefox-blurwa.zip" \
+            --upload-file "${{ github.ref_name }}-firefox-blurwa.zip" \
             --channel listed \
             --api-key "${{ secrets.AMO_JWT_ISSUER }}" \
             --api-secret "${{ secrets.AMO_JWT_SECRET }}"
