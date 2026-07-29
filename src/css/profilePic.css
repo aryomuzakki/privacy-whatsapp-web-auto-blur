@@ -14,20 +14,19 @@
 .b021xdil /* multi contacts attachment */,
 
 /* updated wa version (v2.3000.xx) */
-div.x78zum5>div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x1y332i5.x18d9i69.xexx8yu.x1cbfl22.xbmws1g > div /* user/group profile pic in message list and archived message list*/,
-div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x18d9i69.xexx8yu.x1pic42t.xe2zdcy > div /* user/group profile pic in details list and popup list */,
+div.x78zum5>div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x1y332i5.x18d9i69.xexx8yu.xbmws1g > div /* user/group profile pic in message list and archived message list*/,
+div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x18d9i69.xexx8yu > div /* user/group profile pic in details list and popup list */,
 div[role="dialog"] ._ak8h /* user/group profile pic in popup list */,
-header div[role="button"]:first-child div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p /* user/group profile pic at the top of chat panel */,
-header .html-span div.x1n2onr6.x1f2iure.x1fgtraw.xgd8bvy /* community profile pic in community subgroup switcher */,
+header div[role="button"]:first-child div.x1n2onr6.x16ye13r.x5lhr3w /* user/group profile pic at the top of chat panel */,
+header .html-span .html-div > div.x1n2onr6.x16ye13r.x5lhr3w /* community profile pic in community subgroup switcher */,
+div[data-testid="group-info-community-section"] div.x1n2onr6.x16ye13r.x5lhr3w /* community profile pic in group details info */,
 div.x16ye13r.x10l6tqk.x1wnpwf8.x1vjfegm div[role="button"] /* user profile pic in group chat messages */,
 div.x1okw0bk.x1yh7se0 div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p /* user profile pic in contact attachment */,
 div.x2lah0s.x1c4vz4f.xdl72j9.x1yh7se0 /* user profile pic in multiple contact attachment */,
 div._ak4m /* user profile pic in voice note chat */,
-div.overlay ._ak8h /* user profile pic in overlay media view */
-{
+div.overlay ._ak8h /* user profile pic in overlay media view */ {
   filter: blur(var(--pp-blur)) grayscale(1);
   transition-delay: 0s;
-
 }
 /* former wa version (v2.2412.xx) */
 .pz0xruzv /*Details direct profile pic*/,
@@ -39,21 +38,17 @@ div.x1y9zq84.xt9xd2u.x3tsejo.x1ahzpo1.xvs2etk.xg3wpu6.x1jwbhkm.xgg4q86.x1kr8tdy.
 div.xiqx3za.x1o0tod.x6ikm8r.x10wlt62.x10l6tqk.x13vifvy.xh8yej3.x1knukwh.xihgre1 /* business profile banner in details panel */,
 div.x15e7hw7 /* business profile banner in catalog list */,
 div.x1n2onr6.x2pejg6.x1nbnut7.xvc5jky.x11t971q /* group profile pic in details panel */,
-div.overlay div.xh8yej3.x5yr21d.x6ikm8r.x10wlt62.xiy17q3.x1lvsgvq.x1tbiz1a.xyyilfv /* user/group profile pic overlay view */
-{
+div.overlay div.xh8yej3.x5yr21d.x6ikm8r.x10wlt62.xiy17q3.x1lvsgvq.x1tbiz1a.xyyilfv /* user/group profile pic overlay view */ {
   filter: blur(var(--pp-lg-blur)) grayscale(1);
   transition-delay: 0s;
-
 }
 /* former wa version (v2.2412.xx) */
 .njub1g37 .kk3akd72.claouzo6 /*Starred message profile pic*/,
 
 /* updated wa version (v2.3000.xx) */
-div.x1okw0bk.xbelrpt > div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p /* user profile pic in starred message list */
-{
+div.x1okw0bk.xbelrpt > div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p /* user profile pic in starred message list */ {
   filter: blur(var(--pp-sm-blur)) grayscale(1);
   transition-delay: 0s;
-
 }
 
 /* former wa version (v2.2412.xx) */
@@ -70,12 +65,12 @@ div.x1okw0bk.xbelrpt > div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p /* user p
 .njub1g37 .kk3akd72.claouzo6:hover /*Starred message profile pic*/,
 
 /* updated wa version (v2.3000.xx) */
-div.x78zum5>div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x1y332i5.x18d9i69.xexx8yu.x1cbfl22.xbmws1g > div:hover /* user/group profile pic in message list */,
-div[role="listitem"] ._ak8h:not(:has([data-icon="community-group"])):hover /* user/group profile pic in archived message list */,
-div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x18d9i69.xexx8yu.x1pic42t.xe2zdcy > div:hover /* user/group profile pic in details list and popup list */,
+div.x78zum5>div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x1y332i5.x18d9i69.xexx8yu.xbmws1g > div:hover /* user/group profile pic in message list */,
+div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x18d9i69.xexx8yu > div:hover /* user/group profile pic in details list and popup list */,
 div[role="dialog"] ._ak8h:hover /* user/group profile pic in popup list */,
-header div[role="button"]:first-child div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p:hover /* user/group profile pic at the top of chat panel */,
-header .html-span div.x1n2onr6.x1f2iure.x1fgtraw.xgd8bvy:hover /* community profile pic in community subgroup switcher */,
+header div[role="button"]:first-child div.x1n2onr6.x16ye13r.x5lhr3w:hover /* user/group profile pic at the top of chat panel */,
+header .html-span .html-div > div.x1n2onr6.x16ye13r.x5lhr3w:hover /* community profile pic in community subgroup switcher */,
+div[data-testid="group-info-community-section"] div.x1n2onr6.x16ye13r.x5lhr3w:hover /* community profile pic in group details info */,
 div.x16ye13r.x10l6tqk.x1wnpwf8.x1vjfegm div[role="button"]:hover /* user profile pic in group chat messages */,
 div.x1okw0bk.x1yh7se0 div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p:hover /* user profile pic in contact attachment */,
 div.x2lah0s.x1c4vz4f.xdl72j9.x1yh7se0:hover /* user profile pic in multiple contact attachment */,
@@ -87,17 +82,14 @@ div.xiqx3za.x1o0tod.x6ikm8r.x10wlt62.x10l6tqk.x13vifvy.xh8yej3.x1knukwh.xihgre1:
 div.x15e7hw7:hover /* business profile banner in catalog list */,
 div.x1n2onr6.x2pejg6.x1nbnut7.xvc5jky.x11t971q:hover /* group profile pic in details panel */,
 div.overlay div.xh8yej3.x5yr21d.x6ikm8r.x10wlt62.xiy17q3.x1lvsgvq.x1tbiz1a.xyyilfv:hover /* user/group profile pic overlay view */,
-div.x1okw0bk.xbelrpt > div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p:hover /* user profile pic in starred message list */
-{
+div.x1okw0bk.xbelrpt > div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p:hover /* user profile pic in starred message list */ {
   filter: blur(0) grayscale(0);
   transition-delay: 0.1s;
   transition-duration: 0.15s;
 }
 
-
 /* updated wa version (v2.3000.xx) */
 /* prevent cropped blur */
-div._ak1d > div:first-child > div:first-child /* user profile pic in starred message list */
-{
+div._ak1d > div:first-child > div:first-child /* user profile pic in starred message list */ {
   overflow: visible;
 }

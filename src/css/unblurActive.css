@@ -120,12 +120,12 @@ body:hover div.xkhd6sd._ajxt > ._ajxu > div /* business phone number in details 
 body:hover div._ak1d > div:first-child > div:first-child > :not(:first-child) /* user/group name in starred message list */,
 
 /* profilePic */
-body:hover div.x78zum5>div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x1y332i5.x18d9i69.xexx8yu.x1cbfl22.xbmws1g > div /* user/group profile pic in message list */,
-body:hover div[role="listitem"] ._ak8h:not(:has([data-icon="community-group"])) /* user/group profile pic in archived message list */,
-body:hover div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x18d9i69.xexx8yu.x1pic42t.xe2zdcy > div /* user/group profile pic in details list and popup list */,
+body:hover div.x78zum5>div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x1y332i5.x18d9i69.xexx8yu.xbmws1g > div /* user/group profile pic in message list */,
+body:hover div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x18d9i69.xexx8yu > div /* user/group profile pic in details list and popup list */,
 body:hover div[role="dialog"] ._ak8h /* user/group profile pic in popup list */,
-body:hover header div[role="button"]:first-child div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p /* user/group profile pic at the top of chat panel */,
-body:hover header .html-span div.x1n2onr6.x1f2iure.x1fgtraw.xgd8bvy /* community profile pic in community subgroup switcher */,
+body:hover header div[role="button"]:first-child div.x1n2onr6.x16ye13r.x5lhr3w /* user/group profile pic at the top of chat panel */,
+body:hover header .html-span .html-div > div.x1n2onr6.x16ye13r.x5lhr3w /* community profile pic in community subgroup switcher */,
+body:hover div[data-testid="group-info-community-section"] div.x1n2onr6.x16ye13r.x5lhr3w /* community profile pic in group details info */,
 body:hover div.x16ye13r.x10l6tqk.x1wnpwf8.x1vjfegm div[role="button"] /* user profile pic in group chat messages */,
 body:hover div.x1okw0bk.x1yh7se0 div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p /* user profile pic in contact attachment */,
 body:hover div.x2lah0s.x1c4vz4f.xdl72j9.x1yh7se0 /* user profile pic in multiple contact attachment */,
