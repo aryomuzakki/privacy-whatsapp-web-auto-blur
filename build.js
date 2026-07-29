@@ -28,13 +28,10 @@ const firefoxZipName = `v${version}-firefox-${prefix}.zip`;
 const chromeZipPath = path.join(DEST_DIR, chromeZipName);
 const firefoxZipPath = path.join(DEST_DIR, firefoxZipName);
 
-// Helper to run cross-platform zip command (PowerShell on Windows, zip utility on Linux/macOS)
+// Helper to run cross-platform zip command (tar on Windows 10/11, zip utility on Linux/macOS)
 function createZip(sourcePath, destinationZip) {
   if (process.platform === "win32") {
-    execSync(
-      `powershell.exe -NoProfile -Command "Compress-Archive -Path '${sourcePath}\\*' -DestinationPath '${destinationZip}' -Force"`,
-      { stdio: "inherit" },
-    );
+    execSync(`tar -a -cf "${destinationZip}" -C "${sourcePath}" *`, { stdio: "inherit" });
   } else {
     execSync(`cd "${sourcePath}" && zip -r "${destinationZip}" .`, { stdio: "inherit" });
   }
