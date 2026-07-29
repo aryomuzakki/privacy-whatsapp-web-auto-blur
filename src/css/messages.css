@@ -9,7 +9,7 @@
 ._1BOF7 ._1sykI /*blue info bar*/,
 
 /* updated wa version (v2.3000.xx) */
-div[data-testid=msg-container] /* normal message text */
+div[data-testid="msg-container"] /* normal message text */
 {
   filter: blur(var(--ms-blur)) grayscale(1);
   transition-delay: 0s;
@@ -29,8 +29,8 @@ div[data-testid=msg-container] /* normal message text */
 }
 
 /* updated wa version (v2.3000.xx) */
-div[data-testid=msg-container] > span:first-child ~ div:nth-child(2) /* normal message text more padding */,
-div[data-testid=msg-container] > div:first-child /* normal extra message text more padding */
+div[data-testid="msg-container"] > span:first-child ~ div:nth-child(2) /* normal message text more padding */,
+div[data-testid="msg-container"] > div:first-child /* normal extra message text more padding */
 {
   padding-right: 36px !important; /* extra right padding to prevent covered text */
 }
@@ -43,7 +43,7 @@ div[data-testid=msg-container] > div:first-child /* normal extra message text mo
 ._1BOF7 ._1sykI:hover /*blue info bar*/,
 
 /* updated wa version (v2.3000.xx) */
-div[data-testid=msg-container]:hover /* normal message text */
+div[data-testid="msg-container"]:hover /* normal message text */
 {
   filter: blur(0) grayscale(0);
   transition-delay: 0.1s;
@@ -54,14 +54,14 @@ div[data-testid=msg-container]:hover /* normal message text */
 ._1qNn2 ._1nCcB /*set pseudo background on sticker*/,
 
 /* updated wa version (v2.3000.xx) */
-div[data-testid=msg-container] span._ajxd._ajxk ._ajxj._ajxd /* set pseudo background on sticker */
+div[data-testid="msg-container"] span._ajxd._ajxk ._ajxj._ajxd /* set pseudo background on sticker */
 {
   background-color: var(--incoming-background) !important;
   border-radius: 7.5px !important;
   box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13) !important;
 }
 
-div[data-testid=msg-container]:has(span._ajxd._ajxk ._ajxj._ajxd):hover span._ajxd._ajxk ._ajxj._ajxd /* set pseudo background on sticker */
+div[data-testid="msg-container"]:has(span._ajxd._ajxk ._ajxj._ajxd):hover span._ajxd._ajxk ._ajxj._ajxd /* set pseudo background on sticker */
 {
   background-color: transparent !important;
   border-radius: 0 !important;

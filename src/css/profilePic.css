@@ -21,9 +21,9 @@ header div[role="button"]:first-child div.x1n2onr6.x16ye13r.x5lhr3w /* user/grou
 header .html-span .html-div > div.x1n2onr6.x16ye13r.x5lhr3w /* community profile pic in community subgroup switcher */,
 div[data-testid="group-info-community-section"] div.x1n2onr6.x16ye13r.x5lhr3w /* community profile pic in group details info */,
 div.x16ye13r.x10l6tqk.x1wnpwf8.x1vjfegm div[role="button"] /* user profile pic in group chat messages */,
-div.x1okw0bk.x1yh7se0 div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p /* user profile pic in contact attachment */,
-div.x2lah0s.x1c4vz4f.xdl72j9.x1yh7se0 /* user profile pic in multiple contact attachment */,
-div._ak4m /* user profile pic in voice note chat */,
+div.x1okw0bk.x1g6eq07 div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p /* user profile pic in contact attachment */,
+div.x2lah0s.x1c4vz4f.xdl72j9.x1g6eq07 /* user profile pic in multiple contact attachment */,
+div.x1n2onr6.x1c4vz4f.x2lah0s.xdl72j9.x19991ni.x13dflua.xz4gly6.x67bb7w.x1hc1fzr /* user profile pic in voice note chat */,
 div.overlay ._ak8h /* user profile pic in overlay media view */ {
   filter: blur(var(--pp-blur)) grayscale(1);
   transition-delay: 0s;
@@ -72,9 +72,9 @@ header div[role="button"]:first-child div.x1n2onr6.x16ye13r.x5lhr3w:hover /* use
 header .html-span .html-div > div.x1n2onr6.x16ye13r.x5lhr3w:hover /* community profile pic in community subgroup switcher */,
 div[data-testid="group-info-community-section"] div.x1n2onr6.x16ye13r.x5lhr3w:hover /* community profile pic in group details info */,
 div.x16ye13r.x10l6tqk.x1wnpwf8.x1vjfegm div[role="button"]:hover /* user profile pic in group chat messages */,
-div.x1okw0bk.x1yh7se0 div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p:hover /* user profile pic in contact attachment */,
-div.x2lah0s.x1c4vz4f.xdl72j9.x1yh7se0:hover /* user profile pic in multiple contact attachment */,
-div._ak4m:hover /* user profile pic in voice note chat */,
+div.x1okw0bk.x1g6eq07 div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p:hover /* user profile pic in contact attachment */,
+div.x2lah0s.x1c4vz4f.xdl72j9.x1g6eq07:hover /* user profile pic in multiple contact attachment */,
+div.x1n2onr6.x1c4vz4f.x2lah0s.xdl72j9.x19991ni.x13dflua.xz4gly6.x67bb7w.x1hc1fzr:hover /* user profile pic in voice note chat */,
 div.overlay ._ak8h:hover /* user profile pic in overlay media view */,
 div.x78zum5.xl56j7k.xyorhqc > span > div[role="button"]:hover /* user profile pic in details panel */,
 div.x1y9zq84.xt9xd2u.x3tsejo.x1ahzpo1.xvs2etk.xg3wpu6.x1jwbhkm.xgg4q86.x1kr8tdy.xburx9h.xqm4iv.x8u93l6:hover /* business profile pic in details panel */,
