@@ -144,6 +144,42 @@
         .main-toggle {
           padding-right: 14px;
         }
+        .schedule-settings {
+          padding-right: 14px;
+        }
+        .schedule-times {
+          display: flex;
+          gap: 10px;
+          margin-top: 8px;
+        }
+        .schedule-time {
+          flex: 1;
+        }
+        .schedule-time locales {
+          display: block;
+          font-size: smaller;
+          margin-bottom: 4px;
+        }
+        .schedule-time input {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 4px;
+          color: var(--text-color);
+          background-color: var(--bg-color);
+          border: 1px solid var(--border-color-blur-input);
+          border-radius: 3px;
+          outline: 2px solid transparent;
+        }
+        .schedule-time input:focus-visible {
+          border-color: var(--primary-color);
+          outline-color: color-mix(in srgb, var(--primary-color), var(--bg-color) 50%);
+        }
+        .schedule-help {
+          margin-top: 8px;
+          color: var(--text-color-unit);
+          font-size: smaller;
+          line-height: 1.4;
+        }
         .on-off-toggle {
           display: flex;
           align-items: center;
@@ -588,6 +624,32 @@
           </div>
           <br>
         </div>
+        <div class="schedule-settings">
+          <hr>
+          <div class="on-off-toggle">
+            <h2>
+              <locales data-locale="privacySchedule"></locales>
+            </h2>
+            <input type="checkbox" id="privacySchedule" data-style="privacySchedule">
+            <label for="privacySchedule" data-localetitle="privacyScheduleDescription">
+              <locales data-locale="privacySchedule"></locales>
+            </label>
+          </div>
+          <div class="schedule-times">
+            <div class="schedule-time">
+              <locales id="scheduleStartLabel" data-locale="scheduleStart"></locales>
+              <input type="time" id="scheduleStart" aria-labelledby="scheduleStartLabel">
+            </div>
+            <div class="schedule-time">
+              <locales id="scheduleEndLabel" data-locale="scheduleEnd"></locales>
+              <input type="time" id="scheduleEnd" aria-labelledby="scheduleEndLabel">
+            </div>
+          </div>
+          <p class="schedule-help">
+            <locales data-locale="scheduleHelp"></locales>
+          </p>
+          <br>
+        </div>
         <h2 style="margin: 5px 0; padding-right: 14px;">
           <locales data-locale="extensionSettings"></locales>
         </h2>
@@ -873,6 +935,7 @@
       
       <div id="toast-container"></div>
 
+      <script src="../schedule.js"></script>
       <script src="popup.js"></script>
       <script src="theme-toggle.js"></script>
     </body>

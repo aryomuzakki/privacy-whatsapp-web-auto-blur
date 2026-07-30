@@ -9,7 +9,13 @@ if (typeof browser == "undefined") {
   globalThis.browser = chrome;
 }
 
+if (typeof globalThis.privacySchedule === "undefined" && typeof importScripts === "function") {
+  importScripts("schedule.js");
+}
+
 const settingsIdentifier = "settings";
+const scheduleIdentifier = "privacySchedule";
+const scheduleAlarmName = "privacy-schedule";
 const defaultSettings = {
   settings: {
     on: true,
@@ -44,7 +50,47 @@ const defaultSettings = {
 };
 const requiredPermissions = { 
   origins: ["https://web.whatsapp.com/*"],
-  permissions: ["storage"]
+  permissions: ["storage", "alarms"]
+}
+
+async function ensurePrivacySchedule() {
+  const result = await browser.storage.sync.get([scheduleIdentifier]);
+  if (result.hasOwnProperty(scheduleIdentifier)
+    && globalThis.privacySchedule.isValid(result[scheduleIdentifier])) {
+    return result[scheduleIdentifier];
+  }
+
+  const schedule = { ...globalThis.privacySchedule.defaults };
+  await browser.storage.sync.set({ [scheduleIdentifier]: schedule });
+  return schedule;
+}
+
+async function updatePrivacySchedule(applyState) {
+  const result = await browser.storage.sync.get([settingsIdentifier, scheduleIdentifier]);
+  const schedule = result[scheduleIdentifier];
+
+  await browser.alarms.clear(scheduleAlarmName);
+  if (!schedule?.enabled || !globalThis.privacySchedule.isValid(schedule)) return;
+
+  if (applyState && result.hasOwnProperty(settingsIdentifier)) {
+    const on = globalThis.privacySchedule.isActive(schedule);
+    if (result.settings.on !== on) {
+      result.settings.on = on;
+      await browser.storage.sync.set({ [settingsIdentifier]: result.settings });
+    }
+  }
+
+  await browser.alarms.create(scheduleAlarmName, {
+    when: globalThis.privacySchedule.getNextChange(schedule)
+  });
+}
+
+async function ensurePrivacyScheduleAlarm() {
+  const schedule = await ensurePrivacySchedule();
+  if (!schedule.enabled) return;
+
+  const alarm = await browser.alarms.get(scheduleAlarmName);
+  if (alarm === undefined || alarm === null) updatePrivacySchedule(false);
 }
 
 // On install
@@ -62,8 +108,14 @@ browser.runtime.onInstalled.addListener(() => {
       var currentKeys = Object.keys(result.settings).sort();
       if(JSON.stringify(defaultKeys) === JSON.stringify(currentKeys)) return;
     }
-    browser.storage.sync.set(defaultSettings);
-  });
+    return browser.storage.sync.set(defaultSettings);
+  }).then(ensurePrivacySchedule).then(() => updatePrivacySchedule(true));
+});
+
+browser.runtime.onStartup.addListener(() => updatePrivacySchedule(true));
+
+browser.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === scheduleAlarmName) updatePrivacySchedule(true);
 });
 
 // Handle toggle command
@@ -83,9 +135,15 @@ browser.commands.onCommand.addListener((command) => {
 
 // Update icon on setting change
 browser.storage.onChanged.addListener((changes, area) => {
-  if (area != "sync" || changes.settings == null) return;
+  if (area !== "sync") return;
 
-  browser.action.setIcon({
-    path: "images/status" + (changes.settings.newValue.on == true ? "On" : "Off") + ".png"
-  });
+  if (changes.settings !== undefined) {
+    browser.action.setIcon({
+      path: "images/status" + (changes.settings.newValue.on == true ? "On" : "Off") + ".png"
+    });
+  }
+
+  if (changes[scheduleIdentifier] !== undefined) updatePrivacySchedule(true);
 });
+
+ensurePrivacyScheduleAlarm();

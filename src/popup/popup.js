@@ -11,6 +11,7 @@ if (typeof browser == "undefined") {
 
 const styleIdentifier = "pfwa";
 const settingsIdentifier = "settings";
+const scheduleIdentifier = "privacySchedule";
 
 let version = browser.runtime.getManifest().version;
 document.getElementById('version').innerText = version;
@@ -26,6 +27,11 @@ document.querySelectorAll('[data-localetitle]').forEach(e => {
 function saveSettings() {
   let id = this.dataset.style;
   let checked = this.checked;
+
+  if (id === scheduleIdentifier) {
+    savePrivacySchedule();
+    return;
+  }
 
   browser.storage.sync.get([settingsIdentifier]).then((result) => {
     if (!result.hasOwnProperty(settingsIdentifier)) {
@@ -46,6 +52,49 @@ const switches = document.querySelectorAll("input[type='checkbox']");
 switches.forEach((checkbox) => {
   checkbox.addEventListener('change', saveSettings);
 });
+
+const scheduleToggle = document.getElementById(scheduleIdentifier);
+const scheduleStart = document.getElementById("scheduleStart");
+const scheduleEnd = document.getElementById("scheduleEnd");
+
+function displayPrivacySchedule(schedule) {
+  schedule = { ...globalThis.privacySchedule.defaults, ...schedule };
+  if (!globalThis.privacySchedule.isValid(schedule)) {
+    schedule = { ...globalThis.privacySchedule.defaults };
+  }
+  scheduleToggle.checked = schedule.enabled;
+  scheduleStart.value = schedule.start;
+  scheduleEnd.value = schedule.end;
+}
+
+function savePrivacySchedule() {
+  browser.storage.sync.get([scheduleIdentifier]).then((result) => {
+    let previous = {
+      ...globalThis.privacySchedule.defaults,
+      ...result[scheduleIdentifier]
+    };
+    if (!globalThis.privacySchedule.isValid(previous)) {
+      previous = { ...globalThis.privacySchedule.defaults };
+    }
+
+    const schedule = {
+      enabled: scheduleToggle.checked,
+      start: scheduleStart.value,
+      end: scheduleEnd.value
+    };
+
+    if (!globalThis.privacySchedule.isValid(schedule)) {
+      displayPrivacySchedule(previous);
+      showToast(browser.i18n.getMessage("scheduleInvalid"));
+      return;
+    }
+
+    browser.storage.sync.set({ [scheduleIdentifier]: schedule });
+  });
+}
+
+scheduleStart.addEventListener("change", savePrivacySchedule);
+scheduleEnd.addEventListener("change", savePrivacySchedule);
 
 // toggle open/close blur amount settings
 const onClickOutside = (targetElement, callback, once = true) => {
@@ -188,7 +237,7 @@ forms.forEach((form) => {
 
 
 // Load settings and update switches
-browser.storage.sync.get([settingsIdentifier]).then((result) => {
+browser.storage.sync.get([settingsIdentifier, scheduleIdentifier]).then((result) => {
   if (!result.hasOwnProperty(settingsIdentifier)) {
     browser.runtime.reload();
     return;
@@ -196,7 +245,9 @@ browser.storage.sync.get([settingsIdentifier]).then((result) => {
 
   switches.forEach((checkbox) => {
     let id = checkbox.dataset.style;
-    if (id == "on") {
+    if (id === scheduleIdentifier) {
+      checkbox.checked = result[scheduleIdentifier]?.enabled || false;
+    } else if (id == "on") {
       checkbox.checked = result.settings.on;
     } else if (id === "blurOnIdle") {
       checkbox.checked = result.settings?.blurOnIdle?.isEnabled;
@@ -216,4 +267,17 @@ browser.storage.sync.get([settingsIdentifier]).then((result) => {
     }
   })
 
+  displayPrivacySchedule(result[scheduleIdentifier]);
+});
+
+browser.storage.onChanged.addListener((changes, area) => {
+  if (area !== "sync") return;
+
+  if (changes.settings !== undefined) {
+    document.getElementById("on").checked = changes.settings.newValue.on;
+  }
+
+  if (changes[scheduleIdentifier] !== undefined) {
+    displayPrivacySchedule(changes[scheduleIdentifier].newValue);
+  }
 });

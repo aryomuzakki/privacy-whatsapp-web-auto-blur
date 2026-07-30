@@ -19,10 +19,10 @@
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
-  "permissions": ["storage"],
+  "permissions": ["storage", "alarms"],
   "host_permissions": ["https://web.whatsapp.com/*"],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["schedule.js", "background.js"]
   },
   "browser_specific_settings": {
     "gecko": {
