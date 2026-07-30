@@ -9,6 +9,9 @@ if (typeof browser == "undefined") {
   globalThis.browser = chrome;
 }
 
+document.documentElement.lang = browser.i18n.getUILanguage();
+document.documentElement.dir = browser.i18n.getMessage("@@bidi_dir");
+
 const styleIdentifier = "pfwa";
 const settingsIdentifier = "settings";
 

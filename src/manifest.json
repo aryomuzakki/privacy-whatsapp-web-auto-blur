@@ -53,7 +53,7 @@
       "suggested_key": {
         "default": "Alt+X"
       },
-      "description": "Toggle On/Off"
+      "description": "__MSG_extensionShortcut__"
     }
   }
 }
