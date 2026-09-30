@@ -141,7 +141,8 @@ div.overlay div.xh8yej3.x5yr21d.x6ikm8r.x10wlt62.xiy17q3.x1lvsgvq.x1tbiz1a.xyyil
 div.x1okw0bk.xbelrpt > div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p:hover /* user profile pic in starred message list */,
 
 /* textInput */
-div.lexical-rich-text-input:hover /* message text input */ {
+div.lexical-rich-text-input:hover,
+footer div[contenteditable="true"][data-testid="conversation-compose-box-input"]:hover /* message text input */ {
   transition-delay: 0.04s !important;
   -webkit-transition-duration: 0.04s !important;
   -moz-transition-duration: 0.04s !important;
