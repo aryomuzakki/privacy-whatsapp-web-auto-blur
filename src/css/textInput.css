@@ -7,15 +7,27 @@
 ._3Uu1_ /* textarea */,
 
 /* updated wa version (v2.3000.xx) */
-div.lexical-rich-text-input /* message text input */
+div.lexical-rich-text-input /* legacy lexical message text input */,
+
+/* updated wa version (v2.3000.xx) and later - current Lexical editor */
+/* targets the contenteditable compose box; the inner <p class="selectable-text"> holds the typed text */
+footer div[contenteditable="true"][data-testid="conversation-compose-box-input"] /* message text input */
 {
-  filter: grayscale(1) opacity(0.25);
+  filter: blur(var(--wi-blur, 8px)) grayscale(1);
 }
 
-/* former wa version (v2.2412.xx) */
-._3Uu1_:hover /* textarea */,
+/* reveal ONLY while the mouse pointer is over the input (no focus-based reveal,
+   so the draft re-blurs as soon as the pointer leaves, even if the field still has
+   keyboard focus). */
+footer div[contenteditable="true"][data-testid="conversation-compose-box-input"]:hover /* message text input */
+{
+  filter: grayscale(0) opacity(1);
+  transition-delay: 0.1s;
+  transition-duration: 0.15s;
+}
 
-/* updated wa version (v2.3000.xx) */
+/* legacy hover reveal */
+._3Uu1_:hover,
 div.lexical-rich-text-input:hover /* message text input */
 {
   filter: grayscale(0) opacity(1);

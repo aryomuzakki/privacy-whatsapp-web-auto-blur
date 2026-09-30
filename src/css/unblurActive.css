@@ -147,6 +147,10 @@ body:hover ._3Uu1_ /*textarea*/,
 
 /* updated wa version (v2.3000.xx) */
 /* textInput */
-div.lexical-rich-text-input:hover /* message text input */ {
+div.lexical-rich-text-input:hover,
+
+/* current Lexical editor (v2.3000.xx and later) */
+/* textInput */
+body:hover footer div[contenteditable="true"][data-testid="conversation-compose-box-input"] /* message text input */ {
   filter: grayscale(0) opacity(1);
 }
