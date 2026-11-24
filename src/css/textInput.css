@@ -16,7 +16,9 @@ div.lexical-rich-text-input /* message text input */
 ._3Uu1_:hover /* textarea */,
 
 /* updated wa version (v2.3000.xx) */
-div.lexical-rich-text-input:hover /* message text input */
+div.lexical-rich-text-input:hover /* message text input */,
+div.lexical-rich-text-input:focus /* message text input while typing */,
+div.lexical-rich-text-input:focus-within /* message text input while typing */
 {
   filter: grayscale(0) opacity(1);
   transition-delay: 0.1s;
