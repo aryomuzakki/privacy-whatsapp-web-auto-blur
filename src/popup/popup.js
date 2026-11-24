@@ -201,7 +201,7 @@ browser.storage.sync.get([settingsIdentifier]).then((result) => {
     } else if (id === "blurOnIdle") {
       checkbox.checked = result.settings?.blurOnIdle?.isEnabled;
     } else {
-      checkbox.checked = result.settings.styles[id];
+      checkbox.checked = !!result.settings.styles[id];
     }
   });
 
@@ -212,7 +212,8 @@ browser.storage.sync.get([settingsIdentifier]).then((result) => {
     if (varName === "itBlur") {
       numInput.value = parseInt(result.settings?.blurOnIdle?.idleTimeout || 15);
     } else {
-      numInput.value = parseInt(result.settings.varStyles[varName]);
+      // fall back to the default in the HTML for settings added after install
+      numInput.value = parseInt(result.settings.varStyles[varName] ?? numInput.defaultValue);
     }
   })
 

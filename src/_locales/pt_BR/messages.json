@@ -59,6 +59,15 @@
     "toggleNameDescription": {
         "message": "Desfoca todos os nomes de grupos e usuários."
     },
+    "toggleActiveChatName": {
+        "message": "Nome da conversa aberta"
+    },
+    "toggleActiveChatNameDescription": {
+        "message": "Desfoca apenas o nome e os detalhes da conversa que está aberta."
+    },
+    "acBlurInputDescription": {
+        "message": "Defina a quantidade de desfoque para o nome da conversa aberta (em pixels)."
+    },
     "toggleNoDelay": {
         "message": "Sem transição"
     },
