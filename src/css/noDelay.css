@@ -169,3 +169,14 @@ div.lexical-rich-text-input:hover /* message text input */ {
   -o-transition-duration: 0.04s !important;
   transition-duration: 0.04s !important;
 }
+
+/* header overlay button hover (name and avatar) */
+header:has([data-testid="conversation-info-header-button"]:hover) [data-testid="conversation-info-header-chat-title-name"],
+header:has([data-testid="conversation-info-header-button"]:hover) [data-testid="chat-subtitle"],
+header:has([data-testid="conversation-info-header-button"]:hover) [data-testid="conversation-header-avatar"] {
+  transition-delay: 0.04s !important;
+  -webkit-transition-duration: 0.04s !important;
+  -moz-transition-duration: 0.04s !important;
+  -o-transition-duration: 0.04s !important;
+  transition-duration: 0.04s !important;
+}

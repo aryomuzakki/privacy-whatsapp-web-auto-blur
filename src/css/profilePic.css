@@ -106,3 +106,10 @@ div._ak1d > div:first-child > div:first-child /* user profile pic in starred mes
   transition-delay: 0.1s;
   transition-duration: 0.15s;
 }
+
+/* the header has an invisible overlay button on top of the name and avatar, so hover never reaches them */
+header:has([data-testid="conversation-info-header-button"]:hover) [data-testid="conversation-header-avatar"] /* profile pic at the top of chat panel */ {
+  filter: blur(0) grayscale(0);
+  transition-delay: 0.1s;
+  transition-duration: 0.15s;
+}

@@ -110,3 +110,11 @@ div._ak1d > div:first-child > div:first-child /* user/group name in starred mess
   transition-delay: 0.1s;
   transition-duration: 0.15s;
 }
+
+/* the header has an invisible overlay button on top of the name and avatar, so hover never reaches them */
+header:has([data-testid="conversation-info-header-button"]:hover) [data-testid="conversation-info-header-chat-title-name"] /* name at the top of chat panel */,
+header:has([data-testid="conversation-info-header-button"]:hover) [data-testid="chat-subtitle"] /* details/members at the top of chat panel */ {
+  filter: blur(0) grayscale(0);
+  transition-delay: 0.1s;
+  transition-duration: 0.15s;
+}
