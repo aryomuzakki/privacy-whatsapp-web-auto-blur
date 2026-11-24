@@ -150,3 +150,10 @@ body:hover ._3Uu1_ /*textarea*/,
 div.lexical-rich-text-input:hover /* message text input */ {
   filter: grayscale(0) opacity(1);
 }
+
+/* name (data-testid based) */
+body:hover [data-testid="cell-frame-title"] /* name in chat list */,
+body:hover [data-testid="conversation-info-header-chat-title-name"] /* name at the top of chat panel */,
+body:hover [data-testid="chat-subtitle"] /* details/members at the top of chat panel */ {
+  filter: blur(0) grayscale(0);
+}

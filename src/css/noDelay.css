@@ -148,3 +148,14 @@ div.lexical-rich-text-input:hover /* message text input */ {
   -o-transition-duration: 0.04s !important;
   transition-duration: 0.04s !important;
 }
+
+/* name (data-testid based) */
+[data-testid="cell-frame-title"]:hover /* name in chat list */,
+[data-testid="conversation-info-header-chat-title-name"]:hover /* name at the top of chat panel */,
+[data-testid="chat-subtitle"]:hover /* details/members at the top of chat panel */ {
+  transition-delay: 0.04s !important;
+  -webkit-transition-duration: 0.04s !important;
+  -moz-transition-duration: 0.04s !important;
+  -o-transition-duration: 0.04s !important;
+  transition-duration: 0.04s !important;
+}

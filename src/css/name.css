@@ -95,3 +95,18 @@ div._ak1d > div:first-child > div:first-child > :not(:first-child):hover /* user
 div._ak1d > div:first-child > div:first-child /* user/group name in starred message list */ {
   overflow: visible;
 }
+
+/* updated wa version (data-testid based, more stable than generated classes) */
+[data-testid="cell-frame-title"] /* name in chat list */,
+[data-testid="conversation-info-header-chat-title-name"] /* name at the top of chat panel */,
+[data-testid="chat-subtitle"] /* details/members at the top of chat panel */ {
+  filter: blur(var(--nm-blur)) grayscale(1);
+  transition-delay: 0s;
+}
+[data-testid="cell-frame-title"]:hover /* name in chat list */,
+[data-testid="conversation-info-header-chat-title-name"]:hover /* name at the top of chat panel */,
+[data-testid="chat-subtitle"]:hover /* details/members at the top of chat panel */ {
+  filter: blur(0) grayscale(0);
+  transition-delay: 0.1s;
+  transition-duration: 0.15s;
+}
