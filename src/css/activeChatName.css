@@ -1,0 +1,21 @@
+/* Privacy Extension for WhatsApp(TM) Web                       */
+/* Copyright (c) 2024 Lukas Lenhardt - lukaslen.com             */
+/* Released under the MIT license, see LICENSE file for details */
+
+/* Blurs only the name/details of the currently open chat (chat panel header) */
+/* Uses data-testid attributes, which are more stable than generated class names */
+
+[data-testid="conversation-info-header-chat-title-name"] /* open chat name */,
+[data-testid="chat-subtitle"] /* open chat subtitle (status, participants) */
+{
+  filter: blur(var(--ac-blur, 5px)) grayscale(1);
+  transition: filter .3s;
+  transition-delay: 0s;
+}
+
+[data-testid="conversation-info-header-chat-title-name"]:hover,
+[data-testid="chat-subtitle"]:hover
+{
+  filter: blur(0) grayscale(0);
+  transition-delay: 0.3s;
+}

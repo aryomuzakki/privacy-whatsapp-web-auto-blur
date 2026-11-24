@@ -59,6 +59,15 @@
     "toggleNameDescription": {
         "message": "Verbirgt alle Gruppen- und Benutzernamen."
     },
+    "toggleActiveChatName": {
+        "message": "Name des geöffneten Chats"
+    },
+    "toggleActiveChatNameDescription": {
+        "message": "Verbirgt nur den Namen und die Details des aktuell geöffneten Chats."
+    },
+    "acBlurInputDescription": {
+        "message": "Setze Intensität für den Namen des geöffneten Chats (in pixel)."
+    },
     "toggleNoDelay": {
         "message": "Keine Übergangsverzögerung"
     },

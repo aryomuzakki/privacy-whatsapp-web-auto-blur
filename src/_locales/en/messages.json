@@ -59,6 +59,15 @@
     "toggleNameDescription": {
         "message": "Blurs all group and usernames."
     },
+    "toggleActiveChatName": {
+        "message": "Open chat name"
+    },
+    "toggleActiveChatNameDescription": {
+        "message": "Blurs only the name and details of the chat that is currently open."
+    },
+    "acBlurInputDescription": {
+        "message": "Set Blur Amount for the open chat name (in pixel)."
+    },
     "toggleNoDelay": {
         "message": "No transition delay"
     },

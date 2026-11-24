@@ -118,6 +118,10 @@ body:hover div.xkhd6sd:not([role]) > ._ajxu > div /* business about in details i
 body:hover div.xkhd6sd._ajxt > ._ajxu > div /* business phone number in details info */,
 body:hover div._ak1d > div:first-child > div:first-child > :not(:first-child) /* user/group name in starred message list */,
 
+/* activeChatName */
+body:hover [data-testid="conversation-info-header-chat-title-name"] /* open chat name */,
+body:hover [data-testid="chat-subtitle"] /* open chat subtitle */,
+
 /* profilePic */
 body:hover div.x78zum5>div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x1y332i5.x18d9i69.xexx8yu.xbmws1g > div /* user/group profile pic in message list */,
 body:hover div.x6s0dn4.x78zum5.x1c4vz4f.x2lah0s.x18d9i69.xexx8yu > div /* user/group profile pic in details list and popup list */,

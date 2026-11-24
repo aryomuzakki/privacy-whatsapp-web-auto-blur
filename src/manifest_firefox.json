@@ -51,6 +51,7 @@
         "css/textInput.css",
         "css/profilePic.css",
         "css/name.css",
+        "css/activeChatName.css",
         "css/noDelay.css",
         "css/unblurActive.css"
       ],
