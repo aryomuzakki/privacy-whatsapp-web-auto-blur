@@ -93,3 +93,16 @@ div.x1okw0bk.xbelrpt > div.x1n2onr6.x1c9tyrk.xeusxvb.x1pahc9y.x1ertn4p:hover /* 
 div._ak1d > div:first-child > div:first-child /* user profile pic in starred message list */ {
   overflow: visible;
 }
+
+/* updated wa version (data-testid based, more stable than generated classes) */
+[data-testid="cell-frame-container"] > div:first-child /* profile pic in chat list */,
+[data-testid="conversation-header-avatar"] /* profile pic at the top of chat panel */ {
+  filter: blur(var(--pp-blur)) grayscale(1);
+  transition-delay: 0s;
+}
+[data-testid="cell-frame-container"] > div:first-child:hover /* profile pic in chat list */,
+[data-testid="conversation-header-avatar"]:hover /* profile pic at the top of chat panel */ {
+  filter: blur(0) grayscale(0);
+  transition-delay: 0.1s;
+  transition-duration: 0.15s;
+}

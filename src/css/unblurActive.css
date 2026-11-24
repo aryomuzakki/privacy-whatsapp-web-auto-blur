@@ -157,3 +157,9 @@ body:hover [data-testid="conversation-info-header-chat-title-name"] /* name at t
 body:hover [data-testid="chat-subtitle"] /* details/members at the top of chat panel */ {
   filter: blur(0) grayscale(0);
 }
+
+/* profilePic (data-testid based) */
+body:hover [data-testid="cell-frame-container"] > div:first-child /* profile pic in chat list */,
+body:hover [data-testid="conversation-header-avatar"] /* profile pic at the top of chat panel */ {
+  filter: blur(0) grayscale(0);
+}

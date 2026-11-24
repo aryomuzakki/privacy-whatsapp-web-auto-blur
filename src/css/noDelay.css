@@ -159,3 +159,13 @@ div.lexical-rich-text-input:hover /* message text input */ {
   -o-transition-duration: 0.04s !important;
   transition-duration: 0.04s !important;
 }
+
+/* profilePic (data-testid based) */
+[data-testid="cell-frame-container"] > div:first-child:hover /* profile pic in chat list */,
+[data-testid="conversation-header-avatar"]:hover /* profile pic at the top of chat panel */ {
+  transition-delay: 0.04s !important;
+  -webkit-transition-duration: 0.04s !important;
+  -moz-transition-duration: 0.04s !important;
+  -o-transition-duration: 0.04s !important;
+  transition-duration: 0.04s !important;
+}
